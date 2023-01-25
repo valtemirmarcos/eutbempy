@@ -1,0 +1,89 @@
+{% extends 'layout/base.html' %}
+{% block title %} Escolher Parcelas {% endblock %}
+{% block etapas %} 
+        <div class="box-steps">
+            <h4>4 de 6</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 66.66%" aria-label="Progresso"></div>
+            </div>
+        </div>
+{% endblock %}
+{% block main %}
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h1 class="h3">Confira as informações do seu plano</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-white">
+                            <div class="card-white-content">
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Valor do crédito</h2>
+                                    <h3 class="h4">R$ 15.000,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Parcela mensal sem juros</h2>
+                                    <h3 class="h4">R$ 375,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Parcela após receber a carta</h2>
+                                    <h3 class="h4">R$ 450,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Duração do plano</h2>
+                                    <h3 class="h4">40 meses</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Taxa mensal</h2>
+                                    <h3 class="h4">0,50%</h3>
+                                </div>
+                            </div>
+                            <div class="card-white-footer">
+                                <i class="las la-info-circle"></i>
+                                <p class="h6">O valor da sua carta não se altera independente da taxa!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkTermos">
+                            <label class="form-check-label" for="checkTermos">
+                                Li e concordo com os <a href="#!" data-bs-toggle="modal" data-bs-target="#modalTermos">Termos de adesão</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a id="btnContinuar" href="/cadastro" class="btn btn-primary w-100 disabled" role="button">Conferir informações</a>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-12">
+                                <a id="btnVoltar" href="/valorParcela" class="btn btn-primary w-100" role="button">Voltar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+ 
+{% endblock %}
+{% block js %} 
+<script>
+    $(function(){
+        console.log("ok");
+    });
+    $(document).on('change','#checkTermos',function(evt){
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        if (evt.currentTarget.checked) {
+            $("#btnContinuar").removeClass('disabled');
+        }else{
+            $("#btnContinuar").addClass('disabled')
+        }
+    })
+</script>
+{%endblock%}

@@ -1,0 +1,121 @@
+.style-btn {
+	position: relative;
+	box-shadow: none;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-size: 16/@px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-transform: none;
+	white-space: normal;
+	padding: 14px 30px;
+	.radius(30px);
+}
+.btn {
+	.style-btn;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: @p;
+
+	&:hover, &:focus, &:active, &.focus, &.active, &.active:focus, &.active:hover {
+		outline: none !important;
+		font-weight: 500;
+		box-shadow: none;
+		color: @p;
+		border-color: transparent;
+	}
+	&.btn-primary {
+		background-color: @color-2;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: lighten(@color-2, 10%);
+		}
+	}
+	&.btn-secondary {
+		background-color: @color-1;
+		color: @color-4;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: darken(@color-1, 10%);
+			color: @color-4;
+		}
+	}
+	&.btn-outline-primary {
+		border-color: @color-2;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: lighten(@color-2, 10%);
+		}
+	}
+	&.btn-outline-secondary {
+		border-color: @color-1;
+		color: @color-1;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: darken(@color-1, 10%);
+			color: @color-4;
+			border-color: transparent;
+		}
+	}
+	&.btn-success {
+		background-color: @success;
+		color: @color-4;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: darken(@success, 10%);
+		}
+	}
+	&.btn-danger {
+		background-color: @danger;
+		color: @color-4;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: darken(@danger, 10%);
+		}
+	}
+	&.btn-warning {
+		background-color: @warning;
+		color: @color-4;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color: darken(@warning, 10%);
+		}
+	}
+	&.disabled, &[disabled] {
+		background-color: @color-8;
+		color: @color-4;
+		border-color: transparent;
+		opacity: 10;
+	}
+}
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus, .btn-check:active+.btn-outline-secondary:focus, .btn-check:checked+.btn-outline-secondary:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus, .btn-outline-secondary:active:focus, .btn-check:active+.btn-secondary:focus, .btn-check:checked+.btn-secondary:focus, .btn-secondary.active:focus, .btn-secondary:active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: none!important;
+}
+.btn-icon {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	min-width: 40px;
+	height: 40px;
+	background-color: @color-1;
+	color: @color-4;
+	font-size: 28/@px;
+	.radius(50%);
+	text-decoration: none;
+	.box-shadow;
+
+	&:hover, &:focus, &:active, &.focus, &.active {
+		background-color: @color-2;
+		color: @color-4;
+	}
+	&.btn-whatsapp {
+		background-color: @whatsapp;
+
+		&:hover, &:focus, &:active, &.focus, &.active {
+			background-color:darken(@whatsapp, 5%);
+		}
+	}
+}

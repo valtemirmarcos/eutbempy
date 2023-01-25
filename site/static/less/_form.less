@@ -1,0 +1,244 @@
+/* Input */
+.form-label {
+    margin-bottom: 0;
+    font-size: 14/@px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: @p;
+
+    span {
+        color: @danger;
+        font-weight: 700;
+    }
+}
+.form-control, .form-select {
+    padding: 17px 12px;
+    font-size: 16/@px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: @p;
+    background-color: @color-4;
+    border: 2px solid @border;
+    .radius;
+    transition: none;
+    box-shadow: none;
+
+    &:focus {
+        color: @p;
+        background-color: @color-4;
+        border-color: @color-2;
+        box-shadow: none;
+    }
+}
+.form-group {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+
+    .form-label {
+        position: absolute;
+        left: 10px;
+        top: -7px;
+        background-color: @color-4;
+        padding: 0 2px;
+        .radius;
+    }
+}
+
+/* Select */
+.form-select {
+    background-image: url('../img/icon-select.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    padding-right: 30px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    direction: ltr;
+}
+select::-ms-expand {
+    display: none;
+}
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+/* Placeholder */
+@color-placeholder: @color-3;
+
+:focus::-webkit-input-placeholder {
+    opacity: 0;
+    .transition;
+}
+:focus:-moz-placeholder {
+    opacity: 0;
+    .transition;
+}
+:focus::-moz-placeholder {
+    opacity: 0;
+    .transition;
+}
+:focus:-ms-input-placeholder {
+    opacity: 0;
+    .transition;
+}
+.form-control::-webkit-input-placeholder {
+    color: @color-placeholder;
+}
+.form-control:-moz-placeholder {
+    color: @color-placeholder;
+}
+.form-control::-moz-placeholder {
+    color: @color-placeholder;
+}
+.form-control:-ms-input-placeholder {
+    color: @color-placeholder;
+}
+.form-control.placeholder {
+    color: @color-placeholder;
+}
+
+/* Check/Radio */
+.form-check {
+    margin: 0;
+
+    .form-check-input {
+        border-color: @color-3;
+        background-color: @color-4;
+
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+            border-color: @color-3;
+        }
+        &:checked {
+            background-color: @color-2;
+            border-color: transparent;
+        }
+    }
+    .form-check-label {
+        font-size: 14/@px;
+        color: @p;
+        cursor: pointer;
+
+        a {
+            font-weight: 700;
+            color: @p;
+        }
+    }
+    &.mod-custom {
+        position: relative;
+        padding: 0;
+
+        .form-check-input {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            display: none;
+        }
+        .form-check-input[type=radio]:checked + label {
+            background-color: @color-1;
+            color: @color-4;
+
+            span {
+                color: @color-4;
+            }
+        }
+        .form-check-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 55px;
+            .radius;
+            .box-shadow-lg;
+            background-color: @color-4;
+            color: @p;
+            font-size: 16/@px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-decoration: none;
+            margin: 8px 0;
+            .transition;
+            cursor: pointer;
+            padding: 0 30px;
+
+            span {
+                font-size: 20/@px;
+                font-weight: 600;
+                color: @color-1;
+                padding-left: 20px;
+            }
+        }
+        .recommended {
+            position: absolute;
+            top: 14px;
+            right: 7px;
+            pointer-events: none;
+
+            i {
+                font-size: 22/@px;
+                color: @color-11;
+            }
+        }
+    }
+}
+
+/* Validate */
+.form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"] {
+    padding-right: 12px;
+    background-image: url('../img/icon-select.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+.form-control.is-invalid, .was-validated .form-control:invalid,
+.form-control.is-valid, .was-validated .form-control:valid {
+    padding-right: 12px;
+    background-image: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-select.is-invalid,
+.was-validated .form-select:invalid {
+    border-color: @danger;
+
+    &:focus {
+        border-color: @danger;
+    }
+}
+.form-control.is-valid,
+.was-validated .form-control:valid,
+.form-select.is-valid,
+.was-validated .form-select:valid {
+    border-color: @color-2;
+
+    &:focus {
+        border-color: @color-2;
+    }
+}
+.invalid-feedback {
+    margin-top: 5px;
+    font-size: 13/@px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: @danger;
+}
+.is-invalid~.form-label,
+.was-validated :invalid~.form-label {
+    color: @danger;
+}
+.is-valid~.form-label,
+.was-validated :valid~.form-label {
+    color: @color-2;
+}

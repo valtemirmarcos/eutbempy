@@ -1,0 +1,136 @@
+<?php
+$title = "Conferir plano";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <?php require_once 'assets/includes/inc-tag-head.php'; ?>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <a href="./" class="logo" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="assets/img/logo.svg" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="box-steps">
+                        <h4>2 de 3</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 66.66%" aria-label="Progresso"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form>
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h1 class="h3">Confira as informações do seu plano</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-white">
+                            <div class="card-white-content">
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Valor do crédito</h2>
+                                    <h3 class="h4">R$ 15.000,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Parcela mensal sem juros</h2>
+                                    <h3 class="h4">R$ 375,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Parcela após receber a carta</h2>
+                                    <h3 class="h4">R$ 450,00</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Duração do plano</h2>
+                                    <h3 class="h4">40 meses</h3>
+                                </div>
+                                <div class="item-list py-1">
+                                    <h2 class="h5">Taxa mensal</h2>
+                                    <h3 class="h4">0,50%</h3>
+                                </div>
+                            </div>
+                            <div class="card-white-footer">
+                                <i class="las la-info-circle"></i>
+                                <p class="h6">O valor da sua carta não se altera independente da taxa!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkTermos">
+                            <label class="form-check-label" for="checkTermos">
+                                Li e concordo com os <a href="#!" data-bs-toggle="modal" data-bs-target="#modalTermos">Termos de adesão</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="box-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnContinuar" href="consorcio-cadastro.php" class="btn btn-primary w-100 disabled" role="button">Continuar</a>
+                        <p class="h5">Fiscalizado e regulado pelo Banco Central do Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Termos -->
+    <div class="modal fade" id="modalTermos" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Termos de adesão</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium enim vel voluptates maxime saepe ex ipsam. Est velit dolorem, iste fugiat tempora esse animi, ducimus ut nobis ipsa unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet laudantium alias, mollitia ipsum illum corporis quo expedita a, voluptate magnam! Quis quo id quas nam, accusantium voluptatum ab eos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo consequuntur totam corrupti impedit consectetur repellendus quidem et nemo cum natus ducimus nulla soluta itaque, modi voluptate vero commodi laudantium rem! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <p>&nbsp;</p>
+                    <p>Accusantium, dolores obcaecati blanditiis suscipit cumque placeat eaque sequi nihil, velit accusamus libero pariatur temporibus ipsam debitis ratione fugit voluptate minus repellat? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ipsa iusto reiciendis explicabo dicta exercitationem dolore quod nostrum voluptatem iste provident itaque nobis fugiat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <?php require_once 'assets/includes/inc-js-footer.php'; ?>
+
+    <script>
+        let checkboxTermos = document.getElementById('checkTermos'),
+            btnContinuar = document.getElementById('btnContinuar');
+
+        // Habilitar botão ao clicar no checkbox
+        checkboxTermos.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                btnContinuar.classList.remove('disabled')
+            } else {
+                btnContinuar.classList.add('disabled')
+            }
+        })
+    </script>
+
+</body>
+</html>

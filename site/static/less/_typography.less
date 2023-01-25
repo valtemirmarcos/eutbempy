@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+@px: 16rem;
+
+.font-1 {
+    font-family: 'SF Pro Display', sans-serif;
+}
+.font-2 {
+    font-family: 'Baloo 2', cursive;
+}
+h1, .h1 {
+    font-size: 35/@px;
+    color: @color-1;
+    line-height: 1.2;
+    font-weight: 700;
+    .font-2;
+
+    &.large {
+        font-size: 40/@px;
+    }
+}
+h2, .h2 {
+    font-size: 25/@px;
+    color: @color-1;
+    line-height: 1.2;
+    font-weight: 700;
+    .font-2;
+
+    &.large {
+        font-size: 30/@px;
+        font-weight: 400;
+    }
+}
+h3, .h3 {
+    font-size: 22/@px;
+    color: @p;
+    line-height: 1.2;
+    font-weight: 500;
+    .font-1;
+}
+h4, .h4 {
+    font-size: 20/@px;
+    color: @color-1;
+    line-height: 1.2;
+    font-weight: 600;
+    .font-1;
+}
+h5, .h5 {
+    font-size: 18/@px;
+    color: @color-3;
+    line-height: 1.5;
+    font-weight: 400;
+    .font-1;
+}
+h6, .h6 {
+    font-size: 16/@px;
+    color: @p;
+    line-height: 1.2;
+    font-weight: 400;
+    .font-1;
+}
+p, .p {
+    font-size: 18/@px;
+    color: @p;
+    line-height: 1.4;
+    font-weight: 400;
+    .font-1;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p {
+    margin: 0px;
+    border: none;
+}
+a {
+    .transition;
+    color: @color-1;
+    outline: none !important;
+
+    &:hover, &:focus, &:active {
+        color: @color-2;
+        text-decoration: none;
+    }
+}
+pre {
+    border: none;
+    border-radius: 0;
+}
+strong {
+    font-weight: bold;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 767.98px) {
+    h1, .h1 {
+        font-size: 24/@px;
+
+        &.large {
+            font-size: 28/@px;
+        }
+    }
+    h2, .h2 {
+        font-size: 20/@px;
+
+        &.large {
+            font-size: 25/@px;
+        }
+    }
+    h3, .h3 {
+        font-size: 18/@px;
+    }
+    h4, .h4 {
+        font-size: 16/@px;
+    }
+    h5, .h5 {
+        font-size: 14/@px;
+    }
+    h6, .h6 {
+        font-size: 12/@px;
+    }
+    p, .p {
+        font-size: 16/@px;
+    }
+}

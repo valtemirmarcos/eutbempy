@@ -1,0 +1,69 @@
+{% extends 'layout/base.html' %}
+{% block title %} Valor da Carta {% endblock %}
+{% block etapas %} 
+        <div class="box-steps">
+            <h4>2 de 6</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 33.33%" aria-label="Progresso"></div>
+            </div>
+        </div>
+{% endblock %}
+{% block main %}
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="col-12 mb-3">
+                    <h1 class="h3">Escolha o valor da sua carta</h1>
+                </div>
+                <div class="col-12">
+                    <ul class="nav nav-tab nav-col" id="tabValor">
+                        <li>
+                            <a href="#" class="carta">15 mil</a>
+                        </li>
+                        <li>
+                            <a href="#" class="carta">20 mil</a>
+                        </li>
+                        <li>
+                            <a href="#" class="carta">25 mil</a>
+                        </li>
+                        <li>
+                            <a href="#" class="carta">30 mil</a>
+                        </li>
+                        <li>
+                            <a href="#" class="carta">35 mil</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnContinuar" href="/valorParcela" class="btn btn-primary w-100 disabled" role="button">Escolha valor da carta</a>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnVoltar" href="/projeto" class="btn btn-primary w-100" role="button">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </main>  
+
+
+ 
+{% endblock %}
+{% block js %} 
+<script>
+    $(function(){
+        console.log("ok");
+    });
+    $(document).on('click','.carta',function(evt){
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        $("#btnContinuar").removeClass('disabled');
+    })
+</script>
+{%endblock%}

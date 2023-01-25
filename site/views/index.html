@@ -1,0 +1,63 @@
+{% extends 'layout/base.html' %}
+{% block title %} Inicio {% endblock %}
+{% block main %}
+        <div class="container py-4 py-sm-5">
+            <div class="row">
+                <div class="col-12 px-4 mb-4">
+                    <h1>Você está muito perto de finalmente tirar o seu sonho do papel ;-)</h1>
+                </div>
+                <div class="col-12 px-4">
+                    <div class="bg-steps">
+                        <h2 class="mb-1">Nos próximos<br> passos você vai:</h2>
+                        <div class="item-steps">
+                            <span>1</span>
+                            <h3 class="h5"><strong>Selecionar seu plano</strong></h3>
+                        </div>
+                        <div class="item-steps">
+                            <span>2</span>
+                            <h3 class="h5">Escolher <strong>como quer pagar</strong></h3>
+                        </div>
+                        <div class="item-steps">
+                            <span>3</span>
+                            <h3 class="h5">Efetuar o pagamento da primeira parcela para <strong>aderir ao grupo e garantir a participação do próximo sorteio</strong></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="bg-primary pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 offset-1 mb-3">
+                        <h2 class="large text-white">Relembre seus benefícios!</h2>
+                    </div>
+                    <div class="col-10 offset-1">
+                        <div class="bg-white rounded p-3 pe-4 pb-4">
+                            <ul>
+                                <li>
+                                    <h3 class="py-2">Sem nenhuma taxa até você ser sorteada</h3>
+                                </li>
+                                <li>
+                                    <h3 class="py-2">Não fazemos nenhuma cobrança retroativa de taxas</h3>
+                                </li>
+                                <li>
+                                    <h3 class="py-2">Você pode cancelar sem custo até o primeiro sorteio</h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <picture class="img-right">
+                            <source srcset="assets/img/relembre-seus-beneficios.webp" type="image/webp" />
+                            <img class="img-fluid" src="assets/img/relembre-seus-beneficios.png" title="" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12 col-sm-4 offset-sm-4 px-4">
+                    <a href="/projeto" class="btn btn-primary w-100" role="button">Escolher meu consórcio</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}

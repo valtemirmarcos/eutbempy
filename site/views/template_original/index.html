@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include 'includes/inc-tag-head.html' %}
+</head>
+
+<!--
+    Frameworks e bibliotecas ⭐
+    PHP (Apenas para includes e organização de arquivos HTML)
+    Bootstrap https://getbootstrap.com/
+    Ícones https://icons8.com.br/line-awesome
+    Sweetalert2 (Alert) https://sweetalert2.github.io/
+    Máscara Input https://imask.js.org/
+    Less (Customização CSS)
+-->
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">
+                    <a href="./" class="logo mod-lg" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="{{url_for('static', filename='img/logo.svg')}}" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container py-4 py-sm-5">
+            <div class="row">
+                <div class="col-12 px-4 mb-4">
+                    <h1>Você está muito perto de finalmente tirar o seu sonho do papel ;-)</h1>
+                </div>
+                <div class="col-12 px-4">
+                    <div class="bg-steps">
+                        <h2 class="mb-1">Nos próximos<br> passos você vai:</h2>
+                        <div class="item-steps">
+                            <span>1</span>
+                            <h3 class="h5"><strong>Selecionar seu plano</strong></h3>
+                        </div>
+                        <div class="item-steps">
+                            <span>2</span>
+                            <h3 class="h5">Escolher <strong>como quer pagar</strong></h3>
+                        </div>
+                        <div class="item-steps">
+                            <span>3</span>
+                            <h3 class="h5">Efetuar o pagamento da primeira parcela para <strong>aderir ao grupo e garantir a participação do próximo sorteio</strong></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="bg-primary pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 offset-1 mb-3">
+                        <h2 class="large text-white">Relembre seus benefícios!</h2>
+                    </div>
+                    <div class="col-10 offset-1">
+                        <div class="bg-white rounded p-3 pe-4 pb-4">
+                            <ul>
+                                <li>
+                                    <h3 class="py-2">Sem nenhuma taxa até você ser sorteada</h3>
+                                </li>
+                                <li>
+                                    <h3 class="py-2">Não fazemos nenhuma cobrança retroativa de taxas</h3>
+                                </li>
+                                <li>
+                                    <h3 class="py-2">Você pode cancelar sem custo até o primeiro sorteio</h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <picture class="img-right">
+                            <source srcset="assets/img/relembre-seus-beneficios.webp" type="image/webp" />
+                            <img class="img-fluid" src="assets/img/relembre-seus-beneficios.png" title="" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12 col-sm-4 offset-sm-4 px-4">
+                    <a href="consorcio-escolher.php" class="btn btn-primary w-100" role="button">Escolher meu consórcio</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 px-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="h4 text-nowrap">Empresa Certificada</h2>
+                        <div class="d-inline-flex align-items-center ms-2">
+                            <picture>
+                                <source srcset="assets/img/logo-abac.webp" type="image/webp" />
+                                <img class="img-fluid img-sm ms-2" src="assets/img/logo-abac.png" title="" alt="" />
+                            </picture>
+                            <picture>
+                                <source srcset="assets/img/logo-bcdb.webp" type="image/webp" />
+                                <img class="img-fluid img-sm ms-2" src="assets/img/logo-bcdb.png" title="" alt="" />
+                            </picture>
+                        </div>
+                    </div>
+                    <p>
+                        Eutbem Administradora de Consórcio SA<br>
+                        CNPJ: 40.513.064/0001-00<br>
+                        Rua Ribeiro do Vale, 152,<br>
+                        São Paulo – SP<br>
+                        Telefone: (11) 2780-0329
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <?php require_once 'assets/includes/inc-js-footer.php'; ?>
+
+</body>
+</html>

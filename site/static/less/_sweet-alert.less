@@ -1,0 +1,67 @@
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+    background-color: rgba(0,0,0,0.7);
+}
+.swal2-container {
+    z-index: 9999 !important;
+}
+.swal2-header, .swal2-content {
+    padding: 0;
+}
+.swal2-popup {
+    outline: none;
+    padding: 40px;
+    background-color: @color-4;
+    .radius;
+    font-size: 100%;
+    color: @p;
+    .font-1;
+    .box-shadow;
+
+    .swal2-icon {
+        margin: 0 auto 20px;
+    }
+    .swal2-title {
+        .h3;
+        padding: 0;
+    }
+    .swal2-html-container {
+        .p;
+        margin: 15px 0 0 0;
+    }
+    .swal2-actions {
+        margin: 15px 0 0 0;
+
+        .swal2-styled {
+            .btn;
+
+            &.swal2-confirm {
+                .btn.btn-primary;
+            }
+            &.swal2-cancel {
+                .btn.btn-danger;
+            }
+            &.swal2-deny {
+                .btn.btn-secondary;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        .swal2-html-container {
+            font-size: 16/@px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 320.98px) {
+        .swal2-styled {
+            margin: 3px;
+            min-width: auto;
+            width: 100%;
+        }
+    }
+}

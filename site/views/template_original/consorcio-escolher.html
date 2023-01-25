@@ -1,0 +1,271 @@
+<?php
+$title = "Escolher consórcio";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <?php require_once 'assets/includes/inc-tag-head.php'; ?>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <a href="./" class="logo" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="assets/img/logo.svg" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="box-steps">
+                        <h4>1 de 3</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 33.33%" aria-label="Progresso"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form>
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <center><h1 class="h3">Qual sonho você quer tirar do papel?</h1></center>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Carro ou moto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Cirugia plástica</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Reforma</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Viagem</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Outros Serviços</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" style="display:none">
+                        <div class="col-12 mb-3">
+                            <h1 class="h3">Escolha o valor da sua carta</h1>
+                        </div>
+                        <div class="col-12">
+                            <ul class="nav nav-tab nav-col" id="tabValor">
+                                <li>
+                                    <a href="#!" data-bs-toggle="tab" data-bs-target="#tab15Mil">15 mil</a>
+                                </li>
+                                <li>
+                                    <a href="#!" data-bs-toggle="tab" data-bs-target="#tab20Mil">20 mil</a>
+                                </li>
+                                <li>
+                                    <a href="#!" data-bs-toggle="tab" data-bs-target="#tab25Mil">25 mil</a>
+                                </li>
+                                <li>
+                                    <a href="#!" data-bs-toggle="tab" data-bs-target="#tab30Mil">30 mil</a>
+                                </li>
+                                <li>
+                                    <a href="#!" data-bs-toggle="tab" data-bs-target="#tab35Mil">35 mil</a>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="col-12 mt-4">
+                        <div class="tab-content">
+
+                            <!-- 15 mil -->
+                            <div class="tab-pane fade" id="tab15Mil">
+                                <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                                <div class="form-check mod-custom">
+                                    <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                                    <input class="form-check-input" type="radio" name="15mil" id="15mil1">
+                                    <label class="form-check-label" for="15mil1">
+                                        30 parcelas de <span>R$ 500,00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="15mil" id="15mil2">
+                                    <label class="form-check-label" for="15mil2">
+                                        35 parcelas de <span>R$ 428,57</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="15mil" id="15mil3">
+                                    <label class="form-check-label" for="15mil3">
+                                        40 parcelas de <span>R$ 375,00</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 20 mil -->
+                            <div class="tab-pane fade" id="tab20Mil">
+                                <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                                <div class="form-check mod-custom">
+                                    <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                                    <input class="form-check-input" type="radio" name="20mil" id="20mil1">
+                                    <label class="form-check-label" for="20mil1">
+                                        30 parcelas de <span>R$ 666,66</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="20mil" id="20mil2">
+                                    <label class="form-check-label" for="20mil2">
+                                        35 parcelas de <span>R$ 571,42</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="20mil" id="20mil3">
+                                    <label class="form-check-label" for="20mil3">
+                                        40 parcelas de <span>R$ 500,00</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 25 mil -->
+                            <div class="tab-pane fade" id="tab25Mil">
+                                <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                                <div class="form-check mod-custom">
+                                    <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                                    <input class="form-check-input" type="radio" name="25mil" id="25mil1">
+                                    <label class="form-check-label" for="25mil1">
+                                        30 parcelas de <span>R$ 833,33</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="25mil" id="25mil2">
+                                    <label class="form-check-label" for="25mil2">
+                                        35 parcelas de <span>R$ 714,28</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="25mil" id="25mil3">
+                                    <label class="form-check-label" for="25mil3">
+                                        40 parcelas de <span>R$ 625,00</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 30 mil -->
+                            <div class="tab-pane fade" id="tab30Mil">
+                                <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                                <div class="form-check mod-custom">
+                                    <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                                    <input class="form-check-input" type="radio" name="30mil" id="30mil1">
+                                    <label class="form-check-label" for="30mil1">
+                                        30 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="30mil" id="30mil2">
+                                    <label class="form-check-label" for="30mil2">
+                                        35 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="30mil" id="30mil3">
+                                    <label class="form-check-label" for="30mil3">
+                                        40 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 35 mil -->
+                            <div class="tab-pane fade" id="tab35Mil">
+                                <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                                <div class="form-check mod-custom">
+                                    <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                                    <input class="form-check-input" type="radio" name="35mil" id="35mil1">
+                                    <label class="form-check-label" for="35mil1">
+                                        30 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="35mil" id="35mil2">
+                                    <label class="form-check-label" for="35mil2">
+                                        35 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mod-custom">
+                                    <input class="form-check-input" type="radio" name="35mil" id="35mil3">
+                                    <label class="form-check-label" for="35mil3">
+                                        40 parcelas de <span>R$ 0,00</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="box-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnContinuar" href="consorcio-conferir.php" class="btn btn-primary w-100 disabled d-none" role="button">Continuar</a>
+                        <p class="h5">Fiscalizado e regulado pelo Banco Central do Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- JS -->
+    <?php require_once 'assets/includes/inc-js-footer.php'; ?>
+
+    <script>
+        let tabValor = document.querySelector('#tabValor'),
+            btnContinuarValor = document.getElementById('btnContinuar'),
+            radioValor = document.querySelectorAll('input[type="radio"]');
+
+        // Mostrar botão ao clicar na Tab
+        tabValor.addEventListener('show.bs.tab', function() {
+            btnContinuarValor.classList.remove('d-none')
+        })
+
+        // Habilitar botão ao clicar no radio
+        for (var i = 0; i < radioValor.length; i++) radioValor[i].onchange = removeClassButton;
+
+        function removeClassButton() {
+            btnContinuarValor.classList.remove('disabled')
+        }
+    </script>
+
+</body>
+
+</html>

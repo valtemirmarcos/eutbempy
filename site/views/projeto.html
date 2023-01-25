@@ -1,0 +1,67 @@
+{% extends 'layout/base.html' %}
+{% block title %} Escolher Sonho {% endblock %}
+{% block etapas %} 
+        <div class="box-steps">
+            <h4>1 de 6</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 16.66%" aria-label="Progresso"></div>
+            </div>
+        </div>
+{% endblock %}
+{% block main %}
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row" id="EscolhaTipo">
+                    <div class="col-12 mb-3">
+                        <center><h1 class="h3">Qual sonho você quer tirar do papel?</h1></center>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#" >sonho1</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                 <a href="#" >sonho2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#" >sonho3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnContinuar" href="/valorCarta" class="btn btn-primary w-100 disabled" role="button">Escolha valor da carta</a>
+                    </div>
+                </div>
+            </div>
+        </main>  
+
+
+ 
+{% endblock %}
+{% block js %} 
+<script>
+    $(function(){
+        console.log("ok");
+    });
+    $(document).on('click','.aba-tipo',function(evt){
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        $("#btnContinuar").removeClass('disabled');
+    })
+</script>
+{%endblock%}
