@@ -1,0 +1,146 @@
+{% extends 'layout/base.html' %}
+{% block title %} Cadastrar {% endblock %}
+
+{% block etapas %} 
+        <div class="box-steps">
+            <h4>5 de 6</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 83.33%" aria-label="Progresso"></div>
+            </div>
+        </div>
+{% endblock %}
+{% block main %}
+        <main class="main mod-full">
+            <form>
+                <div class="container py-4 py-sm-5">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h1 class="h3 mb-2">Informe seus dados para cadastro</h1>
+                            <p class="text-muted">Esses dados serão utilizados para efetuarmos seu cadastro no site da eutbem ;-)</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="card-white">
+                                <div class="card-white-content py-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                                        <div class="invalid-feedback">Por favor, digite seu nome completo.</div>
+                                        <label for="nome" class="form-label">Nome*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                                        <div class="invalid-feedback">Por favor, digite um e-mail válido.</div>
+                                        <label for="email" class="form-label">E-mail*</label>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+                                        <div class="invalid-feedback">Por favor, digite seu WhatsApp.</div>
+                                        <label for="telefone" class="form-label">WhatsApp*</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="card-white">
+                                <div class="card-white-content py-4">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+                                        <div class="invalid-feedback">Por favor, digite seu CPF.</div>
+                                        <label for="cpf" class="form-label">CPF*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="cep" placeholder="Digite seu CEP" required>
+                                        <div class="invalid-feedback">Por favor, digite seu CEP.</div>
+                                        <label for="cep" class="form-label">CEP*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required>
+                                        <div class="invalid-feedback">Por favor, digite seu endereço.</div>
+                                        <label for="endereco" class="form-label">Endereço*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="numero" placeholder="Digite o número" maxlength="4" required>
+                                        <div class="invalid-feedback">Por favor, digite o número.</div>
+                                        <label for="numero" class="form-label">Número*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="complemento" placeholder="Ex: Casa">
+                                        <label for="complemento" class="form-label">Complemento</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu bairro" required>
+                                        <div class="invalid-feedback">Por favor, digite seu bairro.</div>
+                                        <label for="endereco" class="form-label">Bairro*</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="endereco" placeholder="Digite sua cidade" required>
+                                        <div class="invalid-feedback">Por favor, digite sua cidade.</div>
+                                        <label for="endereco" class="form-label">Cidade*</label>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <select class="form-select" required>
+                                            <option selected hidden value="">...</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </select>
+                                        <div class="invalid-feedback">Por favor, selecione seu estado.</div>
+                                        <label for="endereco" class="form-label">Estado*</label>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a id="btnContinuar" href="/pagar" class="btn btn-primary w-100 disabled" role="button">Cadastrar</a>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-12">
+                                <a id="btnVoltar" href="/conferir" class="btn btn-primary w-100" role="button">Voltar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+ 
+{% endblock %}
+{% block js %} 
+<script>
+    $(function(){
+        $("#btnContinuar").removeClass('disabled');
+    });
+
+</script>
+{%endblock%}

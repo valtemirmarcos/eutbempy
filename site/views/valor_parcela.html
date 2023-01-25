@@ -1,0 +1,70 @@
+{% extends 'layout/base.html' %}
+{% block title %} Escolher Parcelas {% endblock %}
+
+{% block etapas %} 
+        <div class="box-steps">
+            <h4>3 de 6</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-label="Progresso"></div>
+            </div>
+        </div>
+{% endblock %}
+{% block main %}
+        <main class="main mod-full">
+            <div class="tab-content">
+                <div class="container py-4 py-sm-5">
+                    <!-- 15 mil -->
+                        <h2 class="h3 mb-3">Escolha a melhor opção para você</h2>
+                        <div class="form-check mod-custom">
+                            <span class="recommended" aria-label="Recomendado"><i class="las la-star"></i></span>
+                            <input class="form-check-input nao-selecionado" type="radio" name="plano1" id="15mil1">
+                            <label class="form-check-label" for="15mil1">
+                                30 parcelas de <span>R$ 500,00</span>
+                            </label>
+                        </div>
+                        <div class="form-check mod-custom">
+                            <input class="form-check-input" type="radio" name="plano1" id="15mil2">
+                            <label class="form-check-label" for="15mil2">
+                                35 parcelas de <span>R$ 428,57</span>
+                            </label>
+                        </div>
+                        <div class="form-check mod-custom">
+                            <input class="form-check-input" type="radio" name="plano1" id="15mil3">
+                            <label class="form-check-label" for="15mil3">
+                                40 parcelas de <span>R$ 375,00</span>
+                            </label>
+                        </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <a id="btnContinuar" href="/conferir" class="btn btn-primary w-100 disabled" role="button">Conferir informações</a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-12">
+                            <a id="btnVoltar" href="/valorCarta" class="btn btn-primary w-100" role="button">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>  
+
+
+ 
+{% endblock %}
+{% block js %} 
+<script>
+    $(function(){
+
+    });
+
+
+    $(document).on('click','.form-check-label',function(evt){
+       
+        $("#btnContinuar").removeClass('disabled');
+    })
+</script>
+{%endblock%}

@@ -1,0 +1,313 @@
+<?php
+$title = "Forma de pagamento";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <?php require_once 'assets/includes/inc-tag-head.php'; ?>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <a href="./" class="logo" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="assets/img/logo.svg" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="box-steps">
+                        <h4>3 de 3</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-label="Progresso"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form action="consorcio-mensagem.php" class="js-validation" novalidate>
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h1 class="h3 mb-2">Escolha a forma de pagamento</h1>
+                    </div>
+                    <div class="col-12">
+                        <ul class="nav nav-tab" id="tabPagamento">
+                            <li>
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#cartaoDeCredito">Cartão de Crédito</a>
+                            </li>
+                            <li>
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#pix">PIX</a>
+                            </li>
+                            <li>
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#boleto">Boleto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="tab-content">
+
+                            <!-- Cartão de Crédito -->
+                            <div class="tab-pane fade" id="cartaoDeCredito">
+                                <h2 class="h3 mb-3">Informe seus dados para<br> pagamento da 1ª parcela<a href="#!" class="link-icon ms-1" data-bs-toggle="offcanvas" data-bs-target="#InfoPagamento"><i class="las la-info-circle"></i></a></h2>
+                                <div class="card-white">
+                                    <div class="card-white-content">
+                                        <div class="card-credit mb-4">
+                                            <div class="card-credit-img">
+                                                <img class="img-fluid" src="assets/img/card-mastercard.svg" alt="Mastercard" />
+                                                <img class="img-fluid" src="assets/img/card-visa.svg" alt="Visa" />
+                                                <img class="img-fluid" src="assets/img/card-elo.svg" alt="Elo" />
+                                            </div>
+                                            <div class="card-credit-text">
+                                                <h6>Ambiente seguro</h6>
+                                                <i class="las la-lock"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control" id="numeroCartao" placeholder="0000 0000 0000 0000" required>
+                                                    <div class="invalid-feedback">Por favor, digite o número do cartão.</div>
+                                                    <label for="numeroCartao" class="form-label">Número do cartão*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="nomeCartao" placeholder="Digite o nome impresso" required>
+                                                    <div class="invalid-feedback">Por favor, digite o nome impresso no cartão.</div>
+                                                    <label for="nomeCartao" class="form-label">Nome impresso no cartão*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="form-group mb-0">
+                                                    <input type="tel" class="form-control" id="validade" placeholder="MM/AA" required>
+                                                    <div class="invalid-feedback">Por favor, digite a validade do cartão.</div>
+                                                    <label for="validade" class="form-label">Validade*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="form-group mb-0">
+                                                    <input type="tel" class="form-control" id="cvv" placeholder="AAA" required>
+                                                    <div class="invalid-feedback">Por favor, digite o código de segurança do cartão.</div>
+                                                    <label for="cvv" class="form-label">Código de segurança*</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PIX -->
+                            <div class="tab-pane fade" id="pix">
+                                <h2 class="h3 mb-3">Pronto, agora é só utilizar os dados de pagamento e garantir a 1ª parcela!<a href="#!" class="link-icon ms-1" data-bs-toggle="offcanvas" data-bs-target="#InfoPagamento"><i class="las la-info-circle"></i></a></h2>
+                                <div class="card-white">
+                                    <div class="card-white-content p-4">
+                                        <h3>PIX</h3>
+                                        <div class="d-block text-center my-4">
+                                            <img class="img-fluid img-md" src="assets/img/qrcode.png" alt="qrcode" />
+                                            <button type="button" class="btn btn-secondary w-100 mt-3 js-copy-pix">Copiar código PIX CNPJ</button>
+                                            <input type="text" class="sr-only js-code-pix" value="058412236021226840014br.gov.bcb.pix5524pix-h.stone.com.br/pix/v2/19887345-4a23-4h71-bc0d-22b6671e85425200059879739865406135">
+                                        </div>
+                                        <h5 class="text-highlight">Acesse o aplicativo do seu banco e efetue o pagamento através do seu pix!</h5>
+                                        <h5 class="mt-2">Lembre-se essa é apenas a 1ª parcela, as demais você poderá acessar através do seu login no nosso site.</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boleto -->
+                            <div class="tab-pane fade" id="boleto">
+                                <h2 class="h3 mb-3">Pronto, agora é só utilizar os dados de pagamento e garantir a 1ª parcela!<a href="#!" class="link-icon ms-1" data-bs-toggle="offcanvas" data-bs-target="#InfoPagamento"><i class="las la-info-circle"></i></a></h2>
+                                <div class="card-white">
+                                    <div class="card-white-content p-4">
+                                        <h3>Boleto</h3>
+                                        <div class="d-block text-center my-4">
+                                            <button type="button" class="btn btn-secondary w-100 js-copy-boleto">Copiar código de barras</button>
+                                            <input type="text" class="sr-only js-code-boleto" value="25487.25669 55412.587700 92000.000000 3 854100023598700">
+                                            <a href="assets/pdf/pdf.pdf" class="btn btn-outline-secondary w-100 mt-2 mt-sm-3" download>Download do boleto</a>
+                                        </div>
+                                        <h5 class="text-highlight">Acesse o aplicativo do seu banco e efetue o pagamento do boleto!</h5>
+                                        <h5 class="mt-2">Lembre-se essa é apenas a 1ª parcela, as demais você poderá acessar através do seu login no nosso site.</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="box-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button id="btnContinuar" class="btn btn-primary w-100 disabled" type="submit">Finalizar ;-)</button>
+                        <a id="btnContinuarPix" href="consorcio-mensagem.php" class="btn btn-primary w-100 d-none">Finalizar ;-)</a>
+                        <a id="btnContinuarBoleto" href="consorcio-mensagem.php" class="btn btn-primary w-100 d-none">Finalizar ;-)</a>
+                        <a id="btnContinuarCrypto" href="consorcio-mensagem.php" class="btn btn-primary w-100 d-none">Finalizar ;-)</a>
+                        <p class="h5">Fiscalizado e regulado pelo Banco Central do Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Info Pagamento -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="InfoPagamento">
+        <div class="offcanvas-header">
+            <h3>Pagamento da 1ª parcela ;-)</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Lembrando que esse é o pagamento da primeira parcela para aderir ao grupo e garantir a participação do próximo sorteio, as demais você poderá acessar através do seu login no nosso site.</p>
+            <button type="button" class="btn btn-primary w-100 mt-5" data-bs-dismiss="offcanvas">Ok, entendi ;-)</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <?php require_once 'assets/includes/inc-js-footer.php'; ?>
+
+    <script>
+        // Validate Form Bootstrap
+        (function() {
+            'use strict'
+
+            var forms = document.querySelectorAll('.js-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        var tabPagamento = document.querySelector('#tabPagamento'),
+            btnContinuarPagamento = document.getElementById('btnContinuar'),
+            btnContinuarPix = document.getElementById('btnContinuarPix'),
+            btnContinuarBoleto = document.getElementById('btnContinuarBoleto'),
+            btnContinuarCrypto = document.getElementById('btnContinuarCrypto'),
+            forms = document.querySelectorAll('.js-validation');
+
+        // Habilitar botão ao clicar na Tab
+        tabPagamento.addEventListener('show.bs.tab', function() {
+            btnContinuarPagamento.classList.remove('disabled')
+        })
+
+        // Mostrar Continuar Cartão
+        document.querySelector('[data-bs-target="#cartaoDeCredito"]').addEventListener('show.bs.tab', function() {
+            btnContinuarPix.classList.add('d-none')
+            btnContinuarBoleto.classList.add('d-none')
+            btnContinuarCrypto.classList.add('d-none')
+            btnContinuarPagamento.classList.remove('d-none')
+            
+        })
+
+        // Mostrar Continuar PIX
+        document.querySelector('[data-bs-target="#pix"]').addEventListener('show.bs.tab', function() {
+            btnContinuarPagamento.classList.add('d-none')
+            btnContinuarBoleto.classList.add('d-none')
+            btnContinuarPix.classList.remove('d-none')
+            btnContinuarCrypto.classList.add('d-none')
+            console.log("clicou em pix")
+        })
+
+        // Mostrar Continuar Boleto
+        document.querySelector('[data-bs-target="#boleto"]').addEventListener('show.bs.tab', function() {
+            btnContinuarPagamento.classList.add('d-none')
+            btnContinuarPix.classList.add('d-none')
+            btnContinuarCrypto.classList.add('d-none')
+            btnContinuarBoleto.classList.remove('d-none')
+        })
+
+        // Mask
+        var maskNumeroCartao = IMask(
+            document.getElementById('numeroCartao'), {
+                mask: '0000 0000 0000 0000'
+            }
+        );
+        var maskCvvCartao = IMask(
+            document.getElementById('cvv'), {
+                mask: '000'
+            }
+        );
+        var maskValidadeCartao = IMask(
+            document.getElementById('validade'), {
+                mask: '00/00'
+            }
+        );
+
+        // Copiar Cód. PIX
+        var copyCodePix = document.querySelector('.js-copy-pix');
+
+        copyCodePix.addEventListener('click', function(event) {
+            var copyCodeInputPix = document.querySelector('.js-code-pix');
+            copyCodeInputPix.select();
+
+            try {
+                var copySuccessCodePix = document.execCommand('copy');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Código PIX copiado com sucesso!',
+                    text: copyCodeInputPix.value,
+                    showConfirmButton: false,
+                    timer: 4000,
+                })
+            } catch (err) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo deu errado. Tente novamente!',
+                    showConfirmButton: false,
+                    timer: 4000,
+                })
+            }
+        });
+
+        // Copiar Cód. Boleto
+        var copyCodeBoleto = document.querySelector('.js-copy-boleto');
+
+        copyCodeBoleto.addEventListener('click', function(event) {
+            var copyCodeInputBoleto = document.querySelector('.js-code-boleto');
+            copyCodeInputBoleto.select();
+
+            try {
+                var copySuccessCodeBoleto = document.execCommand('copy');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Código de barras copiado com sucesso!',
+                    text: copyCodeInputBoleto.value,
+                    showConfirmButton: false,
+                    timer: 4000,
+                })
+            } catch (err) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo deu errado. Tente novamente!',
+                    showConfirmButton: false,
+                    timer: 4000,
+                })
+            }
+        });
+    </script>
+
+</body>
+</html>

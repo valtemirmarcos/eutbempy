@@ -1,0 +1,122 @@
+<?php
+$title = "Escolher consórcio";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <?php require_once 'assets/includes/inc-tag-head.php'; ?>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <a href="./" class="logo" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="assets/img/logo.svg" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="box-steps">
+                        <h4>1 de 5</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 13.33%" aria-label="Progresso"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form>
+        <main class="main mod-full">
+            <div class="container py-4 py-sm-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <center><h1 class="h3">Qual sonho você quer tirar do papel?</h1></center>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Carro ou moto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Cirugia plástica</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Reforma</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Viagem</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-12 mt-4">
+                        <ul class="nav nav-tab aba-tipo">
+                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
+                                <a href="#!" data-bs-toggle="tab" data-bs-target="#">Outros Serviços</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="box-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="btnContinuar" href="consorcio-conferir.php" class="btn btn-primary w-100 disabled d-none" role="button">Continuar</a>
+                        <p class="h5">Fiscalizado e regulado pelo Banco Central do Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- JS -->
+    <?php require_once 'assets/includes/inc-js-footer.php'; ?>
+
+    <script>
+        let tabValor = document.querySelector('#tabValor'),
+            btnContinuarValor = document.getElementById('btnContinuar'),
+            radioValor = document.querySelectorAll('input[type="radio"]');
+
+        // Mostrar botão ao clicar na Tab
+        tabValor.addEventListener('show.bs.tab', function() {
+            btnContinuarValor.classList.remove('d-none')
+        })
+
+        // Habilitar botão ao clicar no radio
+        for (var i = 0; i < radioValor.length; i++) radioValor[i].onchange = removeClassButton;
+
+        function removeClassButton() {
+            btnContinuarValor.classList.remove('disabled')
+        }
+    </script>
+
+</body>
+
+</html>

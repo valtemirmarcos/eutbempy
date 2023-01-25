@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="yes" name="mobile-web-app-capable" />
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Big Fish Digital" />
+<meta name="robots" content="noindex, nofollow" /><!-- Atualizar para "index, follow" ao implementar em Produção -->
+<meta name="theme-color" content="#855F9C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)">
+<meta name="title" content="template">
+<meta name="description" content="teste"/>
+<meta property="og:image" content="https://app.eutbem.com.br/assets/img/compartilhar.jpg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="template"/>
+<meta property="og:description" content="teste"/>
+<meta property="og:url" content="https://app.eutbem.com.br/"/>
+<meta property="og:site_name" content="template"/>
+<meta property="fb:admins" content="eutbemOficial" />
+<meta name="twitter:url" content="https://app.eutbem.com.br/">
+<meta name="twitter:image" content="https://app.eutbem.com.br/assets/img/compartilhar.jpg" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="template"/>
+<meta name="twitter:description" content="<?= $description ?>"/>
+<link rel="canonical" href="https://demo.bfserver.com.br/clientes/eutbem/"/><!-- Atualizar URLs em Produção -->
+<title>Eutbem - {% block title %} {% endblock %} </title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon/favicon.ico')}}">
+<link rel="mask-icon" href="{{url_for('static', filename='img/favicon/favicon.svg')}}" color="#3C393C">
+<link rel="apple-touch-icon" sizes="57x57" href="{{url_for('static', filename='img/favicon/apple-icon-57x57.png')}}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='img/favicon/apple-icon-60x60.png')}}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='img/favicon/apple-icon-72x72.png')}}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename='img/favicon/apple-icon-76x76.png')}}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='img/favicon/apple-icon-114x114.png')}}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{url_for('static', filename='img/favicon/apple-icon-120x120.png')}}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{url_for('static', filename='img/favicon/apple-icon-144x144.png')}}"
+<link rel="apple-touch-icon" sizes="152x152" href="{{url_for('static', filename='img/favicon/apple-icon-152x152.png')}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='img/favicon/apple-icon-180x180.png')}}">
+<link rel="apple-touch-icon" sizes="192x192" href="{{url_for('static', filename='img/favicon/apple-icon.png')}}">
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon/favicon.ico')}}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{url_for('static', filename='img/favicon/android-icon-192x192.png')}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='img/favicon/favicon-32x32.png')}}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static', filename='img/favicon/favicon-96x96.png')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='img/favicon/favicon-16x16.png')}}">
+<link rel="manifest" href="{{url_for('static', filename='img/favicon/manifest.json')}}">
+<meta name="msapplication-TileColor" content="#855F9C">
+<meta name="msapplication-TileImage" content="{{url_for('static', filename='img/favicon/ms-icon-144x144.png')}}">
+<meta name="msapplication-config" content="{{url_for('static', filename='img/favicon/browserconfig.xml')}}" />
+
+<!-- Preload CSS/JS -->
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.4/sweetalert2.min.css" as="style">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.4/sweetalert2.min.js" as="script">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.2/imask.min.js" as="script">
+
+<!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.4/sweetalert2.min.css" rel="stylesheet">
+<link href="{{url_for('static', filename='css/style.min.css')}}" rel="stylesheet">
+{% block css %} {%endblock%}
+<!-- Dados estruturados -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "eutbem ;-)",
+        "image": "https://demo.bfserver.com.br/clientes/eutbem/assets/img/logo.png",
+        "telephone": "(11) 2780-0329",
+        "email": "contato@eutbem.com.br",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Ribeiro do Vale, 152, São Paulo - SP"
+        }
+    }
+</script>
+</head>
+
+<!--
+    Frameworks e bibliotecas ⭐
+    PHP (Apenas para includes e organização de arquivos HTML)
+    Bootstrap https://getbootstrap.com/
+    Ícones https://icons8.com.br/line-awesome
+    Sweetalert2 (Alert) https://sweetalert2.github.io/
+    Máscara Input https://imask.js.org/
+    Less (Customização CSS)
+-->
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                
+                <div class="col-4 text-center">
+                    <a href="./" class="logo mod-lg" aria-label="eutbem ;-)">
+                        <img class="img-fluid" src="{{url_for('static', filename='img/logo.svg')}}" title="eutbem ;-)" alt="Você está muito perto de finalmente tirar o seu sonho do papel ;-)" />
+                    </a>
+                </div>
+                <div class="col-4">
+                    {% block etapas %} {% endblock %}
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://api.whatsapp.com/send?phone=551127800329" target="_blank" rel="noopener" role="button" aria-label="WhatsApp" class="btn-icon btn-whatsapp">
+                            <i class="lab la-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        {% block main %} {%endblock%}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 px-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="h4 text-nowrap">Empresa Certificada</h2>
+                        <div class="d-inline-flex align-items-center ms-2">
+                            <picture>
+                                <source srcset="{{url_for('static', filename='img/logo.svg')}}" type="image/webp" />
+                                <img class="img-fluid img-sm ms-2" src="{{url_for('static', filename='img/logo-abac.png')}}" title="" alt="" />
+                            </picture>
+                            <picture>
+                                <source srcset="{{url_for('static', filename='img/logo-bcdb.webp" type="image/webp')}}" />
+                                <img class="img-fluid img-sm ms-2" src="{{url_for('static', filename='img/logo-bcdb.png')}}" title="" alt="" />
+                            </picture>
+                        </div>
+                    </div>
+                    <p>
+                        Eutbem Administradora de Consórcio SA<br>
+                        CNPJ: 40.513.064/0001-00<br>
+                        Rua Ribeiro do Vale, 152,<br>
+                        São Paulo – SP<br>
+                        Telefone: (11) 2780-0329
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.4/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.2/imask.min.js"></script>
+    {% block js %} {%endblock%}
+</body>
+</html>
