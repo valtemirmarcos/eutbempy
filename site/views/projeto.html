@@ -7,6 +7,7 @@
                 <div class="progress-bar" role="progressbar" style="width: 16.66%" aria-label="Progresso"></div>
             </div>
         </div>
+        
 {% endblock %}
 {% block main %}
         <main class="main mod-full">
@@ -15,27 +16,7 @@
                     <div class="col-12 mb-3">
                         <center><h1 class="h3">Qual sonho você quer tirar do papel?</h1></center>
                     </div>
-                    <div class="col-12 mt-4">
-                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
-                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
-                                <a href="#" >sonho1</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
-                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
-                                 <a href="#" >sonho2</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <ul class="nav nav-tab aba-tipo" segmento="'+dado.segment_code+'">
-                            <li style="box-shadow: 7px 4px 4px grey;border-radius: 0.5em">
-                                <a href="#" >sonho3</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <div id="listaSonhos"></div>
                 </div>
             </div>
             <br/>
@@ -54,14 +35,5 @@
  
 {% endblock %}
 {% block js %} 
-<script>
-    $(function(){
-        console.log("ok");
-    });
-    $(document).on('click','.aba-tipo',function(evt){
-        evt.stopImmediatePropagation();
-        evt.preventDefault();
-        $("#btnContinuar").removeClass('disabled');
-    })
-</script>
+    <script src="{{url_for('static', filename='js/projeto.js')}}"></script>
 {%endblock%}

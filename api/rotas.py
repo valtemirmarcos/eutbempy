@@ -9,7 +9,6 @@ app = configGeral.app
 @app.route('/listaUsuarios', methods=["GET"])
 def listaUsuarios():
     return userController.listaUsuarios()
-
 @app.route('/listaClientes', methods=["GET"])
 def listaClientes():
     return clientController.listaClientes()
@@ -22,3 +21,6 @@ def listarPlanos(idSegmento):
 @app.route('/listarParcelas/<idSegmento>/<idPlano>', methods=["GET"])
 def listarParcelas(idSegmento, idPlano):
     return simulacaoController.listarParcelas(idSegmento, idPlano)
+@app.route('/conferirEscolha/<idParcela>', methods=["GET"])
+def conferirEscolha(idParcela):
+    return simulacaoController.conferirEscolha(idParcela)

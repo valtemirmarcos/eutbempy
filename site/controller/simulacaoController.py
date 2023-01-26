@@ -12,15 +12,15 @@ class simulacaoController:
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 
-    def valorCarta():
+    def valorCarta(segmento):
         try:
-            return configGeral.render_template("valor_carta.html",nada='') 
+            return configGeral.render_template("valor_carta.html",ssegmento=segmento) 
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 
-    def valorParcela():
+    def valorParcela(segmento, carta):
         try:
-            return configGeral.render_template("valor_parcela.html",nada='') 
+            return configGeral.render_template("valor_parcela.html",ssegmento=segmento, scarta=carta) 
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 
