@@ -46,10 +46,9 @@ class simulacaoRepositorio:
                 'parcelas_numero':parcelas.parcelas_numero,
                 'id':parcelas.id,
                 'credito_valor':parcelas.credito_valor,
-                'total':parcelas.total,
-                'total_pos_contemplacao':parcelas.total_pos_contemplacao,
+                'total':parcelas.total/100,
+                'total_pos_contemplacao':parcelas.total_pos_contemplacao/100,
                 'effective_tax':parcelas.effective_tax,
                 'taxa_mensal':float('{:.2f}'.format(taxa))
             })
-        
         return lista
