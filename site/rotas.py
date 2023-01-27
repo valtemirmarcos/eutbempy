@@ -34,10 +34,16 @@ def valorParcela():
     return simulacaoController.valorParcela(parametros.get("segmento"), parametros.get("carta"))  
 @app.route('/conferir')
 def conferir():
-    return simulacaoController.conferir() 
+    parametros = configGeral.request.args
+    if not parametros.get("idPlano"):
+        return configGeral.redirect('/projeto')
+    return simulacaoController.conferir(parametros.get("idPlano")) 
 @app.route('/cadastro')
 def cadastro():
-    return simulacaoController.cadastro() 
+    parametros = configGeral.request.args
+    if not parametros.get("idPlano"):
+        return configGeral.redirect('/projeto')
+    return simulacaoController.cadastro(parametros.get("idPlano")) 
 @app.route('/pagar')
 def pagar():
     return simulacaoController.pagar() 

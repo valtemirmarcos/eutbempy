@@ -24,3 +24,6 @@ def listarParcelas(idSegmento, idPlano):
 @app.route('/conferirEscolha/<idParcela>', methods=["GET"])
 def conferirEscolha(idParcela):
     return simulacaoController.conferirEscolha(idParcela)
+@app.route('/gravarCadastro', methods=["POST"])
+def gravarCadastro():
+    return simulacaoController.gravarCadastro()

@@ -24,15 +24,15 @@ class simulacaoController:
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 
-    def conferir():
+    def conferir(idPlano):
         try:
-            return configGeral.render_template("conferir.html",nada='') 
+            return configGeral.render_template("conferir.html",sidPlano=idPlano) 
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 
-    def cadastro():
+    def cadastro(idPlano):
         try:
-            return configGeral.render_template("cadastro.html",nada='') 
+            return configGeral.render_template("cadastro.html",sidPlano=idPlano) 
         except Exception: 
             return configGeral.render_template("error.html",erro="Falha ao carregar os site") 
 

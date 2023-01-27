@@ -20,23 +20,23 @@
                             <div class="card-white-content">
                                 <div class="item-list py-1">
                                     <h2 class="h5">Valor do crédito</h2>
-                                    <h3 class="h4">R$ 15.000,00</h3>
+                                    <h3 class="h4">R$ <span id="valor-credito"></span></h3>
                                 </div>
                                 <div class="item-list py-1">
                                     <h2 class="h5">Parcela mensal sem juros</h2>
-                                    <h3 class="h4">R$ 375,00</h3>
+                                    <h3 class="h4">R$ <span id="valor-mensal"></span></h3>
                                 </div>
                                 <div class="item-list py-1">
                                     <h2 class="h5">Parcela após receber a carta</h2>
-                                    <h3 class="h4">R$ 450,00</h3>
+                                    <h3 class="h4">R$ <span id="valor-contemplado"></span></h3>
                                 </div>
                                 <div class="item-list py-1">
                                     <h2 class="h5">Duração do plano</h2>
-                                    <h3 class="h4">40 meses</h3>
+                                    <h3 class="h4"><span id="qtde-parcelas"></span> meses</h3>
                                 </div>
                                 <div class="item-list py-1">
                                     <h2 class="h5">Taxa mensal</h2>
-                                    <h3 class="h4">0,50%</h3>
+                                    <h3 class="h4"><span id="taxa-mensal"></span>%</h3>
                                 </div>
                             </div>
                             <div class="card-white-footer">
@@ -73,17 +73,7 @@
 {% endblock %}
 {% block js %} 
 <script>
-    $(function(){
-        console.log("ok");
-    });
-    $(document).on('change','#checkTermos',function(evt){
-        evt.stopImmediatePropagation();
-        evt.preventDefault();
-        if (evt.currentTarget.checked) {
-            $("#btnContinuar").removeClass('disabled');
-        }else{
-            $("#btnContinuar").addClass('disabled')
-        }
-    })
+    var idPlano = '{{sidPlano}}';
 </script>
+<script src="{{url_for('static', filename='js/conferir.js')}}"></script> 
 {%endblock%}
