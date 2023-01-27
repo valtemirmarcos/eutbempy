@@ -57,3 +57,23 @@ class simulacaoController:
             })
         except Exception:
             return configGeral.jsonify({'status':'exception','data':Exception}) 
+
+    def listarEnderecos(cep):
+        try:
+            # if simulacaoRepositorio.listarEnderecos(cep)=='cep invalido':
+            #     return configGeral.jsonify({'status':'invalido','data':'cep invalido'}) 
+            return configGeral.jsonify({
+                'status':'success',
+                'data':simulacaoRepositorio.listarEnderecos(cep)
+            })
+        except Exception:
+            return configGeral.jsonify({'status':'exception','data':Exception}) 
+
+    def gravarCadastro():
+        try:
+            return configGeral.jsonify({
+                'status':'success',
+                'data':simulacaoRepositorio.gravarCadastro()
+            })
+        except Exception:
+            return configGeral.jsonify({'status':'exception','data':Exception}) 

@@ -52,3 +52,42 @@ class simulacaoRepositorio:
                 'taxa_mensal':float('{:.2f}'.format(taxa))
             })
         return lista
+    
+    def listarEnderecos(cep):
+        try:
+            dados_objeto = configGeral.requests.get("https://cdn.apicep.com/file/apicep/"+cep+".json")
+            resposta = json.loads(dados_objeto.content)
+            return resposta
+        except ValueError:
+            return 'cep invalido'
+
+    def gravarCadastro():
+        try:
+            dados = configGeral.request.json
+            jsonUsers = {
+                'role_id':2
+            }
+            usuario = simulacaoRepositorio.gerarDadosUsuario()
+
+            return usuario
+        except Exception:
+            return 'falha ao salvar'
+    def gerarDadosUsuario():
+        bcrypt = configGeral.bcrypt
+        dados = configGeral.request.json
+        password = 'password123'
+        bytes = password.encode('utf-8')
+        salt = bcrypt.gensalt()
+        hashed = bcrypt.hashpw(bytes, salt)
+        result = bcrypt.checkpw(bytes, hashed)
+        print(hashed)
+        print(result)
+        jsonUsers = {
+            'role_id':2,
+            'email':dados['email'],
+            'name':dados['first_name'],
+            'password':str(hashed.decode('utf-8')),
+            'api_token':str(hashed.decode('utf-8')),
+            'deleted_at':configGeral.hoje()
+        }
+        return jsonUsers

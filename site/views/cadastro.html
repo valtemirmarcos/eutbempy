@@ -22,18 +22,19 @@
                             <div class="card-white">
                                 <div class="card-white-content py-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                                        <input type="hidden" class="form-control" id="idPlano" cadastroCliente="idPlano" required>
+                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" cadastroCliente="first_name" required>
                                         <div class="invalid-feedback">Por favor, digite seu nome completo.</div>
                                         <label for="nome" class="form-label">Nome*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
-                                        <div class="invalid-feedback">Por favor, digite um e-mail válido.</div>
+                                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" cadastroCliente="email" required>
+                                        <div class="invalid-feedback" id="validaEmail" style="display:none">Por favor, digite um e-mail válido.</div>
                                         <label for="email" class="form-label">E-mail*</label>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
-                                        <div class="invalid-feedback">Por favor, digite seu WhatsApp.</div>
+                                        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" cadastroCliente="phone" required>
+                                        <div class="invalid-feedback" >Por favor, digite seu WhatsApp.</div>
                                         <label for="telefone" class="form-label">WhatsApp*</label>
                                     </div>
                                 </div>
@@ -43,41 +44,41 @@
                             <div class="card-white">
                                 <div class="card-white-content py-4">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
-                                        <div class="invalid-feedback">Por favor, digite seu CPF.</div>
+                                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" cadastroCliente="cpf" required>
+                                        <div class="invalid-feedback" id="validaCpf">Por favor, digite seu CPF.</div>
                                         <label for="cpf" class="form-label">CPF*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" id="cep" placeholder="Digite seu CEP" required>
-                                        <div class="invalid-feedback">Por favor, digite seu CEP.</div>
+                                        <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP" cadastroCliente="cep" required>
+                                        <div class="invalid-feedback" id="validaCep">Por favor, digite seu CEP.</div>
                                         <label for="cep" class="form-label">CEP*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required>
+                                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" cadastroCliente="street" required>
                                         <div class="invalid-feedback">Por favor, digite seu endereço.</div>
                                         <label for="endereco" class="form-label">Endereço*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" id="numero" placeholder="Digite o número" maxlength="4" required>
+                                        <input type="text" class="form-control" id="numero" placeholder="Digite o número" cadastroCliente="number" maxlength="4" required>
                                         <div class="invalid-feedback">Por favor, digite o número.</div>
                                         <label for="numero" class="form-label">Número*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="complemento" placeholder="Ex: Casa">
+                                        <input type="text" class="form-control" id="complemento" placeholder="Ex: Casa" cadastroCliente="complement">
                                         <label for="complemento" class="form-label">Complemento</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu bairro" required>
+                                        <input type="text" class="form-control" id="bairro" placeholder="Digite seu bairro" cadastroCliente="neighborhood" required>
                                         <div class="invalid-feedback">Por favor, digite seu bairro.</div>
-                                        <label for="endereco" class="form-label">Bairro*</label>
+                                        <label for="bairro" class="form-label">Bairro*</label>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="endereco" placeholder="Digite sua cidade" required>
+                                        <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" cadastroCliente="city" required>
                                         <div class="invalid-feedback">Por favor, digite sua cidade.</div>
-                                        <label for="endereco" class="form-label">Cidade*</label>
+                                        <label for="cidade" class="form-label">Cidade*</label>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <select class="form-select" required>
+                                        <select class="form-control form-select" id="uf" cadastroCliente="state" required>
                                             <option selected hidden value="">...</option>
                                             <option value="AC">Acre</option>
                                             <option value="AL">Alagoas</option>
@@ -110,9 +111,6 @@
                                         <div class="invalid-feedback">Por favor, selecione seu estado.</div>
                                         <label for="endereco" class="form-label">Estado*</label>
                                     </div>
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -121,7 +119,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <a id="btnContinuar" href="/pagar" class="btn btn-primary w-100 disabled" role="button">Cadastrar</a>
+                                <a id="btnContinuar" href="#" class="btn btn-primary w-100 disabled" role="button">Cadastrar</a>
                             </div>
                         </div>
                         <br/>
@@ -138,9 +136,8 @@
 {% endblock %}
 {% block js %} 
 <script>
-    $(function(){
-        $("#btnContinuar").removeClass('disabled');
-    });
+    var idPlano = '{{sidPlano}}';
 
 </script>
+<script src="{{url_for('static', filename='js/cadastro.js')}}"></script> 
 {%endblock%}

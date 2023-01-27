@@ -3,6 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
 import json
 from flask_cors import CORS, cross_origin
+import requests
+import bcrypt
+import datetime
 
 
 app = Flask(__name__,template_folder='views')
@@ -21,3 +24,7 @@ def convertNumero(numero):
         return  str(int(intNumero/1000))+' Mil'
     else:
         return numero
+
+def hoje():
+    agora = datetime.datetime.now()
+    return datetime.datetime.strftime(agora,"%Y-%m-%d %H:%M:%S")

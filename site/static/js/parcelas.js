@@ -11,15 +11,17 @@
     $(document).on('click','.form-check-label',function(evt){
        
         $("#btnContinuar").removeClass('disabled');
+        $("#btnContinuar").attr('href','/conferir?idPlano='+$(this).attr('idParcela'));
+        console.log($(this).attr('idParcela'));
     });
 
     function listarParcelas(json){
         var tab = '';
             $.each(json, function(index, dado){
                 tab +='<div class="form-check mod-custom">';
-                tab +='     <input class="form-check-input" type="radio" name="plano1" id="15mil2">';
-                tab +='         <label class="form-check-label" for="15mil2">';
-                tab +='             35 parcelas de <span>R$ 428,57</span>';
+                tab +='     <input class="form-check-input" type="radio" name="plano1" id="'+dado.id+'">';
+                tab +='         <label class="form-check-label" idParcela="'+dado.id+'" for="'+dado.id+'">';
+                tab +='             '+dado.parcelas_numero+' parcelas de <span>R$ '+formataMoeda(dado.installment,'pt-BR',2)+'</span>';
                 tab +='         </label>';
                 tab +='</div>';
             });

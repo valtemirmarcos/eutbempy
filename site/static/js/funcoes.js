@@ -83,8 +83,14 @@ function gerarJson(tipoTabela){
     var arjson = {};
     $('.form-control').each(function(i){
         if($(this).val()!='' || typeof $(this).attr('required') !== "undefined"){
-            if($(this).val()=='' && typeof $(this).attr('required') !== "undefined"){
+            if($(this).val()=='' && typeof $(this).attr('required') !== "undefined" && $(this).attr('type')=="number"){
                 $(this).val('0');
+            }
+            if($(this).val()=='' && typeof $(this).attr('required') !== "undefined" && $(this).attr('type')!="number"){
+                $(".invalid-feedback").eq(i).show().text();
+                return;
+            }else{
+                $(".invalid-feedback").eq(i).hide();
             }
             if (typeof $(this).attr('leitura') === "undefined") {
                 if (typeof $(this).attr(tipoTabela) !== "undefined") {
@@ -288,3 +294,76 @@ var strPad = function(i,l,s) {
     }
 
 };
+function validarEmail(email, campoErro,callback){
+    var emailFilter=/^.+@.+\..{2,}$/;
+    var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/
+    // condição
+    if(!(emailFilter.test(email))||email.match(illegalChars)){
+        $(campoErro).show()
+        .text('Por favor, informe um email válido.');
+        callback(true);
+    }else{
+        $(campoErro).hide();
+        callback(false);
+    }
+
+}
+function validaCPF(cpf, callback)
+{
+		cpf = cpf.replace('.','');
+		cpf = cpf.replace('.','');
+		cpf = cpf.replace('-','');
+        var status='';
+		erro = new String;
+		if (cpf.length < 11) erro += "Sao necessarios 11 digitos para verificacao do CPF! \n\n";
+		var nonNumbers = /\D/;
+		if (nonNumbers.test(cpf)) erro += "A verificacao de CPF suporta apenas numeros! \n\n";
+		if (cpf == "00000000000" || cpf == "11111111111" ||
+		    cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" ||
+            cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" ||
+            cpf == "88888888888" || cpf == "99999999999"){
+			  erro += "Numero de CPF invalido!"
+		}
+		var a = [];
+		var b = new Number;
+		var c = 11;
+		for (i=0; i<11; i++){
+			a[i] = cpf.charAt(i);
+			if (i <  9) b += (a[i] *  --c);
+		}
+		if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }
+		b = 0;
+		c = 11;
+		for (y=0; y<10; y++) b += (a[y] *  c--);
+		if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11-x; }
+		status = a[9] + ""+ a[10]
+		if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10])){
+			erro +="Digito verificador com problema!";
+		}
+		if (erro.length > 0){
+            callback(erro);
+			return false;
+		}
+        callback(false);
+		return true;
+}
+function buscarCep(cep, callback){
+    var erro="";
+    cep = cep.replace("-","");
+    if(cep.length != 8){
+        erro = 'cep invalido';
+        console.log(erro);
+        callback(erro);
+    }else{
+        var parte1 = cep.substring(0,5);
+        var parte2 = cep.substring(5,8);
+        var unificado = parte1+"-"+parte2;
+        console.log(parte1);
+        console.log(parte2);
+        carregaAjax(urlGeral+'/listarEnderecos/'+unificado, function(resposta){
+            callback(resposta);
+        });
+    }
+    // 
+    
+}
