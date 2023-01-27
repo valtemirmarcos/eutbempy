@@ -15,23 +15,8 @@
                     <h1 class="h3">Escolha o valor da sua carta</h1>
                 </div>
                 <div class="col-12">
-                    <ul class="nav nav-tab nav-col" id="tabValor">
-                        <li>
-                            <a href="#" class="carta">15 mil</a>
-                        </li>
-                        <li>
-                            <a href="#" class="carta">20 mil</a>
-                        </li>
-                        <li>
-                            <a href="#" class="carta">25 mil</a>
-                        </li>
-                        <li>
-                            <a href="#" class="carta">30 mil</a>
-                        </li>
-                        <li>
-                            <a href="#" class="carta">35 mil</a>
-                        </li>
-                    </ul>
+                    <div id="listaCartas"></div>
+
                 </div>
             </div>
             <br/>
@@ -55,15 +40,10 @@
 
  
 {% endblock %}
-{% block js %} 
+{% block js %}
+
 <script>
-    $(function(){
-        console.log("ok");
-    });
-    $(document).on('click','.carta',function(evt){
-        evt.stopImmediatePropagation();
-        evt.preventDefault();
-        $("#btnContinuar").removeClass('disabled');
-    })
+    var segmento = '{{ssegmento}}';
 </script>
+<script src="{{url_for('static', filename='js/cartas.js')}}"></script> 
 {%endblock%}

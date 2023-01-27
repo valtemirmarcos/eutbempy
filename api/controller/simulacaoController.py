@@ -48,3 +48,12 @@ class simulacaoController:
             })
         except Exception:
             return configGeral.jsonify({'status':'exception','data':Exception}) 
+        
+    def conferirEscolha(idParcela):
+        try:
+            return configGeral.jsonify({
+                'status':'success',
+                'data':simulacaoRepositorio.listarDadosParcelaEscolhida(idParcela)
+            })
+        except Exception:
+            return configGeral.jsonify({'status':'exception','data':Exception}) 
